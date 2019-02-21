@@ -1,0 +1,13 @@
+CPP=g++
+
+### Please modify CPLEX_INCLUDE and CPLEX_LIB to your installed CPLEX directory
+CPLEX_INCLUDE=/share/hormozdiarilab/Tools/CPLEX/ibm/ILOG/CPLEX_Studio1263/cplex/include/ 
+CPLEX_LIB=/share/hormozdiarilab/Tools/CPLEX/ibm/ILOG/CPLEX_Studio1263/cplex/lib/x86-64_linux/static_pic/ 
+
+CPP_FLAGS= -g -w -std=c++11 -c -m64 -I $(CPLEX_INCLUDE) -mcmodel=medium
+CPP_FLAGS_Link= -std=c++11 -m64 -I $(CPLEX_INCLUDE) -L $(CPLEX_LIB) -lcplex -lm -lpthread -mcmodel=medium
+
+fit_hic_model: fit_hic_model.o
+	$(CPP) -o fit_hic_model fit_hic_model.o $(CPP_FLAGS_Link)
+fit_hic_model.o: fit_hic_model.cpp
+	$(CPP) $(CPP_FLAGS) fit_hic_model.cpp
