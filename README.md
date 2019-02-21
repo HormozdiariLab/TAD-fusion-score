@@ -23,6 +23,7 @@ I. Fit the model with Hi-C data
     b. The output model file is "GM12878.40kb.chr22.model" in folder "Examples/Output".
     c. In the model file, 1st, 2nd and 4th columns are alpha, beta, and the insulator respectively.
   7. For your convenience, we also provide models (in the folder "Model") that we fitted for GM12878 from Rao et al. data at 5kb resolution.
+<br>
 ################
 II. Calculate TAD-fusion score from a model
   1. Compile the source code by running the script
