@@ -6,7 +6,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
   1. With Hi-C data of GM12878 from Rao et al.
     a. Compile the TAD-fusion score tool by running the script
          ./compile_cal_tad_fusion_score.sh
-    b. Prepare the input deletion file (three-column format as the file "Data/disease_del.dat")
+    b. Prepare the input deletion file (three-column format as the file [LICENSE](./Data))
     c. Run the tool with default parameters as 
          ./../src/cal_tad_fusion_score -md ../Model/GM_Rao_5kb -f ../Data/disease_del.dat -mnl 10000 -mxl 5000000 -w 100 -d 0.06 -o Output/disease_del_TAD_fusion_score.dat
     d. The output file is "Output/disease_del_TAD_fusion_score.dat", the last column is the TAD-fusion score
@@ -61,7 +61,7 @@ Huynh L, Hormozdiari F. TAD-fusion score: discovery and ranking the contribution
 
 ### Licence
 
-See the [LICENSE](./LICENSE) file for license rights and limitations (BSD-2).
+See the [LICENSE](./LICENSE.txt) file for license rights and limitations (BSD-2).
 
 ### Acknowledgement
 
