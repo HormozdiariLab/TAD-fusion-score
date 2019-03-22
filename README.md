@@ -3,7 +3,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
 
 ### How to calculate the TAD-fusion scores of a deletion set?
 
-  1. With Hi-C data of GM12878 from [Rao et al](https://www.cell.com/abstract/S0092-8674(14)01497-4).
+  # With Hi-C data of GM12878 from [Rao et al](https://www.cell.com/abstract/S0092-8674(14)01497-4).
     - Compile the TAD-fusion score tool by running the script
          `./compile_cal_tad_fusion_score.sh`
     - Prepare the input deletion file (three-column format as the file [Data/disease_del.dat](./Data/disease_del.dat))
