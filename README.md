@@ -13,7 +13,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
     4. The output file is "Output/disease_del_TAD_fusion_score.dat", the last column is the TAD-fusion score
     5. Sample scripts are in the folder "Examples", all options to calculate the TAD-fusion score are explained in the section below
 
-  #### With a new Hi-C dataset
+  ##### With a new Hi-C dataset
     1. Compile and run the model tool to build the model from the new Hi-C dataset (you need to install CPLEX, see the section below)
     2. Run TAD-fusion score tool (with the new model) to get the TAD-fusion score (as the section above)
 
