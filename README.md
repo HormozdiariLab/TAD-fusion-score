@@ -3,7 +3,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
 
 ### How to calculate the TAD-fusion scores of a deletion set?
 
-  # With Hi-C data of GM12878 from [Rao et al](https://www.cell.com/abstract/S0092-8674(14)01497-4).
+  #### With Hi-C data of GM12878 from [Rao et al](https://www.cell.com/abstract/S0092-8674(14)01497-4)
     - Compile the TAD-fusion score tool by running the script
          `./compile_cal_tad_fusion_score.sh`
     - Prepare the input deletion file (three-column format as the file [Data/disease_del.dat](./Data/disease_del.dat))
@@ -12,7 +12,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
     - d. The output file is "Output/disease_del_TAD_fusion_score.dat", the last column is the TAD-fusion score
     - e. Sample scripts are in the folder "Examples", all options to calculate the TAD-fusion score are explained in the section below
 
-  2. With a new Hi-C dataset
+  #### With a new Hi-C dataset
     - a. Compile and run the model tool to build the model from the new Hi-C dataset (you need to install CPLEX, see the section below)
     - b. Run TAD-fusion score tool (with the new model) to get the TAD-fusion score (as the section above)
 
