@@ -1,7 +1,7 @@
 ### What is TAD-fusion score?
 TAD-fusion score is a score to quantify deletions based on their potential disruption of the 3D genome structure. More specifically, TAD-fusion score is defined as the expected number of additional genomic interactions created as a result of the deletion.
 
-### How to calculate the TAD-fusion score of a deletion set?
+### How to calculate the TAD-fusion scores of a deletion set?
 
   1. With Hi-C data of GM12878 from Rao et al.
     a. Compile the TAD-fusion score tool by running the script
@@ -17,6 +17,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
     b. Run TAD-fusion score tool (with the new model) to get the TAD-fusion score (as the section above)
 
 ### Options for calculating the TAD-fusion score
+
     -md       Model directory, model files must be renamed as chr1.model, chr2.model, ..., chrX.model 
     -f        The file that stores deletions that we need to calculate the TAD-fusion score, the file format has three columns (e.g. one row is "chr2    221278232       223014332")
     -mnl      The minimum length (a number of base pairs), any deletion that is shorter than this threshold will be skipped
@@ -49,8 +50,6 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
     b. The output model file is "GM12878.40kb.chr22.model" in folder "Examples/Output".
     c. In the model file, 1st, 2nd and 4th columns are alpha, beta, and the insulator respectively.
   7. For your convenience, we also provide models (in the folder "Model") that we fitted for GM12878 from Rao et al. data at 5kb resolution.
-
-
 
 ### Support
 
