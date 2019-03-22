@@ -9,7 +9,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
 ```
 ./compile_cal_tad_fusion_score.sh
 ```
-2. Prepare the input deletion file (3-column format as the file [Data/disease_del.dat](./Data/disease_del.dat)
+2. Prepare the input deletion file (3-column format as the [sample file](./Data/disease_del.dat))
 3. Run the tool with default parameters as 
 ```
 ./../src/cal_tad_fusion_score -md ../Model/GM_Rao_5kb -f ../Data/disease_del.dat -mnl 10000 -mxl 5000000 -w 100 -d 0.06 -o Output/disease_del_TAD_fusion_score.dat
