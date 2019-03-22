@@ -34,12 +34,12 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
 
 1. Install CPLEX
 2. Set variables CPLEX_INCLUDE and CPLEX_LIB (in file [make_fit_hic_model](./src/make_fit_hic_model)) to the directory where CPLEX is installed
-- Compile the source by running the script
+3. Compile the source by running the script
 ```
 ./compile_fit_hic_model.sh
 ```
-3. If the compilation is successful, an executable file "fit_hic_model" will be generated in the folder "src"
-4. Options for fitting the model
+4. If the compilation is successful, an executable file "fit_hic_model" will be generated in the folder "src"
+5. Options for fitting the model
 
        -fn       Data file path
        -ff       Data file format ("full_matrix_format" of Schmitt et al. data or "sparse_matrix_format" of Rao et al. data)
@@ -51,7 +51,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
        -mso      The minimum overlap (i.e. a number of bins) between two segments (in the case the method is set to "segmentation")
        -zero     A constant to replace the zero value to take the log
        -of       The output model file
-5. Example: The script file "fitting.sh" (in folder "Examples") is to fit the model of chr22 of GM12878 from Schmitt et al. data
+6. Example: The script file "fitting.sh" (in folder "Examples") is to fit the model of chr22 of GM12878 from Schmitt et al. data
    - Run the script by
    ```
    cd Examples
@@ -59,7 +59,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
    ```
    - The output model file is "GM12878.40kb.chr22.model" in folder "Examples/Output".
    - In the model file, 1st, 2nd and 4th columns are alpha, beta, and the insulator respectively.
-6. For your convenience, we also provide models (in the folder "Model") that we fitted for GM12878 from Rao et al. data at 5kb resolution.
+7. For your convenience, we also provide models (in the folder "Model") that we fitted for GM12878 from Rao et al. data at 5kb resolution.
 
 ### Support
 
