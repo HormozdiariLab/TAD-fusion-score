@@ -6,14 +6,14 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
 ##### From 5kb Hi-C data of GM12878 of [Rao et al](https://www.cell.com/abstract/S0092-8674(14)01497-4)
   
 1. Compile the TAD-fusion score tool by running the script
-```
-./compile_cal_tad_fusion_score.sh
-```
+   ```
+   ./compile_cal_tad_fusion_score.sh
+   ```
 2. Prepare the input deletion file (3-column format as the [sample file](./Data/disease_del.dat))
 3. Run the tool with default parameters as 
-```
-./../src/cal_tad_fusion_score -md ../Model/GM_Rao_5kb -f ../Data/disease_del.dat -mnl 10000 -mxl 5000000 -w 100 -d 0.06 -o Output/disease_del_TAD_fusion_score.dat
-```
+   ```
+   ./../src/cal_tad_fusion_score -md ../Model/GM_Rao_5kb -f ../Data/disease_del.dat -mnl 10000 -mxl 5000000 -w 100 -d 0.06 -o Output/disease_del_TAD_fusion_score.dat
+   ```
 4. The output file is "Output/disease_del_TAD_fusion_score.dat", the last column is the TAD-fusion score
 5. Sample scripts are in the folder [Examples](./Examples), here are options for calculating the TAD-fusion score
   
@@ -29,14 +29,14 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
 
 1. Fit the model with Hi-C data
 
-     1. Install CPLEX
-     2. Set variables CPLEX_INCLUDE and CPLEX_LIB (in file [make_fit_hic_model](./src/make_fit_hic_model)) to the directory where CPLEX is installed
-     3. Compile the source by running the script
-     ```
-     ./compile_fit_hic_model.sh
-     ```
-     4. If the compilation is successful, an executable file "fit_hic_model" will be generated in the folder "src"
-     5. Options for fitting the model
+     * a. Install CPLEX
+     * b. Set variables CPLEX_INCLUDE and CPLEX_LIB (in file [make_fit_hic_model](./src/make_fit_hic_model)) to the directory where CPLEX is installed
+     * c. Compile the source by running the script
+          ```
+          ./compile_fit_hic_model.sh
+          ```
+     * d. If the compilation is successful, an executable file "fit_hic_model" will be generated in the folder "src"
+     * e. Options for fitting the model
 
             -fn       Data file path
             -ff       Data file format ("full_matrix_format" of Schmitt et al. data or "sparse_matrix_format" of Rao et al. data)
@@ -49,15 +49,15 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
             -zero     A constant to replace the zero value to take the log
             -of       The output model file
         
-     6. Example: The script file "fitting.sh" (in folder "Examples") is to fit the model of chr22 of GM12878 from Schmitt et al. data
+     * f. Example: The script file "fitting.sh" (in folder "Examples") is to fit the model of chr22 of GM12878 from Schmitt et al. data
         * Run the script by
-        ```
-        cd Examples
-        ./fitting.sh
-        ```
+          ```
+          cd Examples
+          ./fitting.sh
+          ```
         * The output model file is "GM12878.40kb.chr22.model" in folder "Examples/Output".
         * In the model file, 1st, 2nd and 4th columns are alpha, beta, and the insulator respectively.
-     7. For your convenience, we also provide models (in the folder "Model") that we fitted for GM12878 from Rao et al. data at 5kb resolution.
+     * g. For your convenience, we also provide models (in the folder "Model") that we fitted for GM12878 from Rao et al. data at 5kb resolution.
 
 2. Run TAD-fusion score tool (with the new model) to get the TAD-fusion score (as the section above)
 
