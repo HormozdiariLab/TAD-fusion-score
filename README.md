@@ -3,7 +3,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
 
 ### How to calculate the TAD-fusion scores of a deletion set?
 
-##### From 5kb Hi-C data of GM12878 of [Rao et al](https://www.cell.com/abstract/S0092-8674(14)01497-4)
+##### Option 1: From 5kb Hi-C data of GM12878 of [Rao et al](https://www.cell.com/abstract/S0092-8674(14)01497-4)
   
 1. Compile the TAD-fusion score tool by running the script
    ```
@@ -25,7 +25,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
        -d        The delta value threshold to consider if a bin pair is interacted or not.
        -o        The output file, the file format has four columns where the last one is the TAD-fusion score  
 
-##### From a new Hi-C dataset
+##### Option 2: From a new Hi-C dataset
 
 1. Fit the model with Hi-C data
 
