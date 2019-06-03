@@ -47,7 +47,7 @@ TAD-fusion score is a score to quantify deletions based on their potential disru
             -sg       Length (i.e. a number of bins) of a segment (in the case the method is set to "segmentation")
             -mso      The minimum overlap (i.e. a number of bins) between two segments (in the case the method is set to "segmentation")
             -zero     A constant to replace the zero value to take the log
-            -of       The output model file
+            -of       The output model file (the file format has 4 columns where alpha, beta, and the insulation are 1st, 3rd, 4th column respectively)
         
      * f. Example: The script file "fitting.sh" (in folder "Examples") is to fit the model of chr22 of GM12878 from Schmitt et al. data
         * Run the script by
